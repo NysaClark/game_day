@@ -315,11 +315,11 @@ function createSlides() {
   });
 }
 
-function startSlideshow(){
+function startSlideshow() {
   interval = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
 }
 
-function resetSlideshow(){
+function resetSlideshow() {
   clearInterval(interval);
   startSlideshow();
 }
@@ -351,35 +351,50 @@ const projectContainer = document.getElementById("projects");
 const categories = {};
 
 students.forEach(student => {
-    if (!categories[student.category]) {
-        categories[student.category] = [];
-    }
-    categories[student.category].push(student);
+  if (!categories[student.category]) {
+    categories[student.category] = [];
+  }
+  categories[student.category].push(student);
 });
 
 Object.keys(categories).forEach(category => {
-    const categoryElement = document.createElement("div");
-    categoryElement.classList.add("category");
-    categoryElement.textContent = category;
-    projectContainer.appendChild(categoryElement);
-    
-    const flexContainer = document.createElement("div");
-    flexContainer.classList.add("flex-container");
+  const categoryElement = document.createElement("div");
+  categoryElement.classList.add("category");
 
-    categories[category].forEach(student => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        
-        card.innerHTML = `
+  const dash1 = document.createElement("div");
+  dash1.classList.add("dash");
+
+  categoryElement.appendChild(dash1)
+
+  const categoryName = document.createElement("h3");
+  categoryName.textContent = category;
+
+  categoryElement.appendChild(categoryName)
+
+  const dash2 = document.createElement("div");
+  dash2.classList.add("dash");
+
+  categoryElement.appendChild(dash2)
+
+  projectContainer.appendChild(categoryElement);
+
+  const flexContainer = document.createElement("div");
+  flexContainer.classList.add("flex-container");
+
+  categories[category].forEach(student => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
             <img src="${student.image}" alt="${student.project}">
             <div class="card-content">
-                <h3>${student.name}</h3>
-                <p>${student.project}</p>
+                <h3>${student.project}</h3>
+                <p>${student.name}</p>
             </div>
         `;
-        
-        flexContainer.appendChild(card);
-    });
 
-    projectContainer.appendChild(flexContainer);
+    flexContainer.appendChild(card);
+  });
+
+  projectContainer.appendChild(flexContainer);
 });
