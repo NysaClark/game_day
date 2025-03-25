@@ -4,19 +4,17 @@
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
+h1 {
   font-family: "Press Start 2P", system-ui;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .container {
-  background: linear-gradient(#F6941D, #ED1C24);
+  background: linear-gradient(#f6941d, #ed1c24);
   width: 100%;
   height: 100%;
   display: flex;
@@ -60,32 +58,34 @@ h1 {
 
 .subtext {
   text-transform: uppercase;
-  color: #0C2340;
+  color: #0c2340;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
 .btn {
-  background-color: #0C2340;
-  color: #FFFFFF;
+  background-color: #0c2340;
+  color: #ffffff;
   outline: none;
   border: none;
   border-radius: 25px;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .slideshow-container {
-  gap: 1rem;
+  /* gap: 1rem; */
+
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
+  /* perspective: 1000px; */
 }
 
-.slideshow-container button {
+/* .slideshow-container button {
   background-color: transparent;
   border: none;
   outline: none;
@@ -93,47 +93,49 @@ h1 {
 }
 
 .slideshow-container button:active {
-  transform: scale(.9);
-}
+  transform: scale(0.9);
+} */
 
 .slides-container {
-  width: 740px;
-  height: 400px;
-  position: relative;
+  /* 
   overflow: hidden;
   margin: 0 auto;
   text-align: center;
+  */
+
+  position: relative;
+  width: 740px;
+  height: 400px;
+  /* transform-style: preserve-3d; */
+  /* transition: transform 2s ease-in-out; */
 }
 
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
+  transition: transform 1s ease-in-out, opacity 1.5s ease-in-out;
 }
 
 .slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  visibility: hidden;
   width: 100%;
-  height: 100%;
-  background: rgba(12, 35, 64, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(12, 35, 64);
+  color: white;
+  padding: .5rem;
+}
+
+.active .overlay {
+  visibility: visible;
 }
 
 .overlay h2 {
@@ -143,7 +145,6 @@ h1 {
 .overlay h3 {
   font-size: 1.5rem;
 }
-
 
 .category {
   width: 100%;
@@ -161,14 +162,14 @@ h1 {
 .category h3 {
   padding: 0 2rem;
   max-width: 50vw;
-  text-shadow: 0px 5px #0C2340;
+  text-shadow: 0px 5px #0c2340;
 }
 
 .category .dash {
   width: 20%;
   height: 3px;
   background: white;
-  box-shadow: 0px 2px 2px #0C2340;
+  box-shadow: 0px 2px 2px #0c2340;
 }
 
 .flex-container {
@@ -183,7 +184,7 @@ h1 {
 }
 
 .card {
-  color: #FFFFFF;
+  color: #ffffff;
 
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
@@ -203,16 +204,16 @@ h1 {
 .card-content {
   margin-top: -5px;
   padding: 20px;
-  background: linear-gradient(#0C2340, #0c2340bf);
+  background: linear-gradient(#0c2340, #0c2340bf);
 }
 
 .card-content h3 {
   font-family: "Roboto", sans-serif;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
 
-.card-content p{
- color: #F6941D;
- font-size: 1.1rem;
+.card-content p {
+  color: #f6941d;
+  font-size: 1.1rem;
 }
