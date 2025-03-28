@@ -1,60 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Day - Classroom Projects</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="banner">
-      <!-- <img id="central_logo" src="Central_logo_1.png" alt=""> -->
-      <img id="central_logo" src="./images/Coding_white.png"">
-      <h1>Welcome to Game Day!</h1>
-    </div>
-
-    <!-- <h1>Coding Year 1 Student Games</h1> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@100..900&display=swap"
+    rel="stylesheet">
+  <title>Game Day - Student Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p class="subtext">Welcome to</p>
+      <div class="title">
+        <h1>Game</h1>
+        <h1>Day</h1>
+      </div>
+      <button class="btn">Start</button>
+    </header>
 
     <div class="slideshow-container">
-      <div id="slides"></div>
-      <div class="buttons">
-        <button onclick="prevSlide()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            class="bi bi-chevron-left"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-            />
-          </svg>
-        </button>
-        <button onclick="nextSlide()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            class="bi bi-chevron-right"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-            />
-          </svg>
-        </button>
+      <button id="prevButton" onclick="prevSlide()">
+        <img src="./images/prevButton.svg" alt="Previous Slide Button">
+      </button>
+      <div class="slides-container" id="slides-container">
+        <!-- <div id="slides"></div> -->
       </div>
+      <button id="nextButton" onclick="nextSlide()">
+        <img src="./images/nextButton.svg" alt="Next Slide Button">
+      </button>
+
     </div>
 
     <div id="projects"></div>
-
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
+</body>
 </html>

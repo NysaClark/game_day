@@ -1,3 +1,4 @@
+
 const students = [
   // Betting & Chance Games
   {
@@ -296,12 +297,13 @@ const students = [
 
 let interval;
 let currentIndex = 0;
-const slidesContainer = document.getElementById("slides-container");
+const slidesContainer = document.getElementById("slides");
 
 function createSlides() {
-  students.forEach((project) => {
+  students.forEach((project, index) => {
     const slide = document.createElement("div");
     slide.classList.add("slide");
+    if (index === 0) slide.classList.add("active");
     slide.innerHTML = `
               <img src="${project.image}" alt="${project.project}">
               <div class="overlay">
@@ -311,61 +313,10 @@ function createSlides() {
           `;
     slidesContainer.appendChild(slide);
   });
-  updateSlides();
-}
-
-function updateSlides() {
-  const slides = document.querySelectorAll(".slide");
-  slides.forEach((slide, index) => {
-    slide.classList.remove("active");
-
-    if (index < currentIndex) {
-      if (currentIndex - index <= 2) {
-        if (currentIndex - index == 1) {
-          slide.style.transform = `translateX(-${
-            (currentIndex - index) * 15
-          }%) scale(.9)`;
-        } else {
-          slide.style.transform = `translateX(-${
-            (currentIndex - index) * 15
-          }%) scale(.8)`;
-        }
-        slide.style.zIndex = `${10 - (currentIndex - index)}`;
-        slide.style.opacity = 1;
-      } else {
-        //fade out left
-        slide.style.transform = `translateX(-60%) scale(.7)`;
-        slide.style.opacity = 0;
-      }
-    } else if (index == currentIndex) {
-      slide.classList.add("active");
-      slide.style.transform = `translateX(0%) scale(1)`;
-      slide.style.opacity = "1";
-      slide.style.zIndex = "10";
-    } else if (index > currentIndex) {
-      if (index - currentIndex <= 2) {
-        if (index - currentIndex == 1) {
-          slide.style.transform = `translateX(${
-            (index - currentIndex) * 15
-          }%) scale(.9)`;
-        } else {
-          slide.style.transform = `translateX(${
-            (index - currentIndex) * 15
-          }%) scale(.8)`;
-        }
-        slide.style.opacity = 1;
-        slide.style.zIndex = `${10 - (index - currentIndex)}`;
-      }else{ //fade in right
-        slide.style.transform = `translateX(60%) scale(.7)`;
-        slide.style.opacity = 0;
-        slide.style.zIndex = `${10 - (index - currentIndex + 1)}`;
-      }
-    }
-  });
 }
 
 function startSlideshow() {
-  interval = setInterval(nextSlide, 4000); // Auto-slide every 5 seconds
+  interval = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
 }
 
 function resetSlideshow() {
@@ -373,52 +324,64 @@ function resetSlideshow() {
   startSlideshow();
 }
 
+function showSlide(index) {
+  const slides = document.querySelectorAll(".slide");
+  slides.forEach((slide) => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
 function nextSlide() {
   currentIndex = (currentIndex + 1) % students.length;
-  updateSlides();
+  showSlide(currentIndex);
   resetSlideshow();
 }
 
 function prevSlide() {
   currentIndex = (currentIndex - 1 + students.length) % students.length;
-  updateSlides();
+  showSlide(currentIndex);
   resetSlideshow();
 }
 
 // interval = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
 createSlides();
-// showSlide(currentIndex);
+showSlide(currentIndex);
 startSlideshow();
 
 const projectContainer = document.getElementById("projects");
 const categories = {};
 
-students.forEach((student) => {
+students.forEach(student => {
   if (!categories[student.category]) {
     categories[student.category] = [];
   }
   categories[student.category].push(student);
 });
 
-Object.keys(categories).forEach((category) => {
+Object.keys(categories).forEach(category => {
   const categoryElement = document.createElement("div");
   categoryElement.classList.add("category");
 
+  const dash1 = document.createElement("div");
+  dash1.classList.add("dash");
+
+  categoryElement.appendChild(dash1)
+
   const categoryName = document.createElement("h3");
   categoryName.textContent = category;
-  categoryElement.appendChild(categoryName);
 
-  const dash = document.createElement("div");
-  dash.classList.add("dash");
+  categoryElement.appendChild(categoryName)
 
-  categoryElement.appendChild(dash);
+  const dash2 = document.createElement("div");
+  dash2.classList.add("dash");
+
+  categoryElement.appendChild(dash2)
 
   projectContainer.appendChild(categoryElement);
 
   const flexContainer = document.createElement("div");
   flexContainer.classList.add("flex-container");
 
-  categories[category].forEach((student) => {
+  categories[category].forEach(student => {
     const card = document.createElement("div");
     card.classList.add("card");
 
