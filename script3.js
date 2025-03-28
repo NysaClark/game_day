@@ -319,33 +319,47 @@ function updateSlides() {
   slides.forEach((slide, index) => {
     slide.classList.remove("active");
 
-    let offset = (index - currentIndex + students.length) % students.length;
-
-    if (offset === 0) {
+    if (index < currentIndex) {
+      if (currentIndex - index <= 2) {
+        if (currentIndex - index == 1) {
+          slide.style.transform = `translateX(-${
+            (currentIndex - index) * 15
+          }%) scale(.9)`;
+        } else {
+          slide.style.transform = `translateX(-${
+            (currentIndex - index) * 15
+          }%) scale(.8)`;
+        }
+        slide.style.zIndex = `${10 - (currentIndex - index)}`;
+        slide.style.opacity = 1;
+      } else {
+        //fade out left
+        slide.style.transform = `translateX(-60%) scale(.7)`;
+        slide.style.opacity = 0;
+      }
+    } else if (index == currentIndex) {
       slide.classList.add("active");
-      slide.style.transform = "translateX(0) scale(1)";
+      slide.style.transform = `translateX(0%) scale(1)`;
       slide.style.opacity = "1";
       slide.style.zIndex = "10";
-    } else if (offset === 1) {
-      slide.style.transform = "translateX(150px) scale(0.8)";
-      slide.style.opacity = "1";
-      slide.style.zIndex = "9";
-    } else if (offset === (students.length-1)) {
-      slide.style.transform = "translateX(-150px) scale(0.8)";
-      slide.style.opacity = "1";
-      slide.style.zIndex = "8";
-    } else if (offset === 2) {
-      slide.style.transform = "translateX(300px) scale(0.6)";
-      slide.style.opacity = "1";
-      slide.style.zIndex = "7";
-    } else if (offset === (students.length -2)) {
-      slide.style.transform = "translateX(-300px) scale(0.6)";
-      slide.style.opacity = "1";
-      slide.style.zIndex = "6";
-    } else {
-      // console.log(offset)
-      slide.style.transform = "translateX(-500px) scale(0.5)";
-      slide.style.opacity = "0";
+    } else if (index > currentIndex) {
+      if (index - currentIndex <= 2) {
+        if (index - currentIndex == 1) {
+          slide.style.transform = `translateX(${
+            (index - currentIndex) * 15
+          }%) scale(.9)`;
+        } else {
+          slide.style.transform = `translateX(${
+            (index - currentIndex) * 15
+          }%) scale(.8)`;
+        }
+        slide.style.opacity = 1;
+        slide.style.zIndex = `${10 - (index - currentIndex)}`;
+      }else{ //fade in right
+        slide.style.transform = `translateX(60%) scale(.7)`;
+        slide.style.opacity = 0;
+        slide.style.zIndex = `${10 - (index - currentIndex + 1)}`;
+      }
     }
   });
 }
@@ -358,12 +372,6 @@ function resetSlideshow() {
   clearInterval(interval);
   startSlideshow();
 }
-
-// function showSlide(index) {
-//   const slides = document.querySelectorAll(".slide");
-//   slides.forEach((slide) => slide.classList.remove("active"));
-//   slides[index].classList.add("active");
-// }
 
 function nextSlide() {
   currentIndex = (currentIndex + 1) % students.length;
