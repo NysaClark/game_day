@@ -9,7 +9,7 @@ const students = [
   {
     name: "Jaic Andrades",
     project: "Rock Paper Scissors",
-    image: "./images/placeholder.jpg",
+    image: "./images/Jaic_Andrades.PNG",
     category: "Betting & Chance Games",
   },
   {
@@ -21,13 +21,13 @@ const students = [
   {
     name: "Damian Borbolla",
     project: "Dice Game",
-    image: "./images/placeholder.jpg",
+    image: "./images/Damian_Borbolla.PNG",
     category: "Betting & Chance Games",
   },
   {
     name: "Andrelle Beverly Jr",
     project: "Cyber Showdown",
-    image: "./images/placeholder.jpg",
+    image: "./images/Andrelle_Beverly.PNG",
     category: "Betting & Chance Games",
   },
   {
@@ -94,26 +94,27 @@ const students = [
   },
   {
     name: "Yanitza Chavez",
-    project: "USA Map Quiz",
-    image: "./images/placeholder.jpg",
+    project: "Guess the Country",
+    image: "./images/Yanitza_Chavez.PNG",
     category: "Guessing Games",
   },
   {
     name: "Desiree Dabney-Corona",
     project: "Guess the Sonic Character",
-    image: "./images/placeholder.jpg",
+    image: "./images/Desiree_Dabney_Corona.PNG",
     category: "Guessing Games",
   },
   {
     name: "Demian English",
     project: "Music Guesser",
-    image: "./images/placeholder.jpg",
+    image: "./images/Demian_English.PNG",
     category: "Guessing Games",
   },
   {
     name: "Jose Galeas",
-    project: "Guess Which Video Was Rated the Funniest",
-    image: "./images/placeholder.jpg",
+    // project: "Guess Which Video Was Rated the Funniest",
+    project: "Rate Funniest Video",
+    image: "./images/Jose_Galeas.PNG",
     category: "Guessing Games",
   },
   {
@@ -125,13 +126,19 @@ const students = [
   {
     name: "Benjamin Pandumrongpun",
     project: "Color Game",
+    image: "./images/Benjamin_Pandumrongpun.PNG",
+    category: "Guessing Games",
+  },
+  {
+    name: "Valeria Sanchez Llanes",
+    project: "General Knowledge Quiz",
     image: "./images/placeholder.jpg",
     category: "Guessing Games",
   },
   {
     name: "Kayla Yocum",
     project: "Guess the Song",
-    image: "./images/placeholder.jpg",
+    image: "./images/Kayla_Yocum.PNG",
     category: "Guessing Games",
   },
   {
@@ -151,7 +158,7 @@ const students = [
   {
     name: "Joao Dias",
     project: "Wordle",
-    image: "./images/placeholder.jpg",
+    image: "./images/Joao_Dias.PNG",
     category: "Word Games",
   },
   {
@@ -183,7 +190,7 @@ const students = [
   {
     name: "Corbin Patel",
     project: "Multiplication Game",
-    image: "./images/placeholder.jpg",
+    image: "./images/Corbin_Patel.PNG",
     category: "Math Games",
   },
 
@@ -191,9 +198,15 @@ const students = [
   {
     name: "Ola Al Zreikat",
     project: "Brick Breaker",
-    image: "./images/placeholder.jpg",
+    image: "./images/Ola_Al_Zreikat.PNG",
     category: "Reaction Time & Clicker Games",
   },
+  // {
+  //   name: "Joao Dias",
+  //   project: "Dot Dash Survival",
+  //   image: "./images/placeholder.jpg",
+  //   category: "Word Games",
+  // },
   {
     name: "Corey Furman",
     project: "Energy Savers",
@@ -214,8 +227,8 @@ const students = [
   },
   {
     name: "Rasmidah Shekul Islam",
-    project: "Whac A Color",
-    image: "./images/placeholder.jpg",
+    project: "Whac' A Color",
+    image: "./images/Rasmidah_Shekul_Islam.PNG",
     category: "Reaction Time & Clicker Games",
   },
   {
@@ -235,13 +248,13 @@ const students = [
   {
     name: "Kiara Flores",
     project: "Cat Generator",
-    image: "./images/placeholder.jpg",
+    image: "./images/Kiara_Flores.PNG",
     category: "Other Games",
   },
   {
     name: "Martin Miller",
-    project: "Character Puzzle",
-    image: "./images/placeholder.jpg",
+    project: "Character Placement Game",
+    image: "./images/Martin_Miller.PNG",
     category: "Other Games",
   },
   {
@@ -264,8 +277,8 @@ const students = [
   },
   {
     name: "Matthew Mendoza",
-    project: "",
-    image: "./images/placeholder.jpg",
+    project: "cee-lo",
+    image: "./images/Matthew_Mendoza.PNG",
     category: "Other Games",
   },
   {
@@ -276,14 +289,14 @@ const students = [
   },
   {
     name: "Ritvik Pattela",
-    project: "",
-    image: "./images/placeholder.jpg",
+    project: "Match the Fruit",
+    image: "./images/Ritvik_Pattela.jpg",
     category: "Other Games",
   },
   {
     name: "Tyler Thorne",
-    project: "No Name ?",
-    image: "./images/placeholder.jpg",
+    project: "Fortnite Clicker",
+    image: "./images/Tyler_Thorne.PNG",
     category: "Other Games",
   },
   {

@@ -86,13 +86,13 @@ h1 {
 }
 
 #nextButton {
-  background: rgba(128, 128, 128, 0.7);
+  background: rgba(200, 200, 200, 0.5);
   border-top-right-radius: 68px;
   border-bottom-right-radius: 68px;
   height: 136px;
 }
 #prevButton {
-  background: rgba(128, 128, 128, 0.7);
+  background: rgba(200, 200, 200, 0.5);
   border-top-left-radius: 68px;
   border-bottom-left-radius: 68px;
   height: 136px;
@@ -197,6 +197,7 @@ h1 {
 
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  /* max-width: 407px; */
 }
 
 .card:hover {
