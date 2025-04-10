@@ -201,12 +201,12 @@ const students = [
     image: "./images/Ola_Al_Zreikat.PNG",
     category: "Reaction Time & Clicker Games",
   },
-  {
-    name: "Joao Dias",
-    project: "Dot Dash Survival",
-    image: "./images/Joao_Dias_2.PNG",
-    category: "Reaction Time & Clicker Games",
-  },
+  // {
+  //   name: "Joao Dias",
+  //   project: "Dot Dash Survival",
+  //   image: "./images/Joao_Dias_2.PNG",
+  //   category: "Reaction Time & Clicker Games",
+  // },
   {
     name: "Corey Furman",
     project: "Energy Savers",
