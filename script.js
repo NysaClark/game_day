@@ -51,7 +51,7 @@ const students = [
   {
     name: "Toby Littleman",
     project: "Minesweeper",
-    image: "./images/placeholder.jpg",
+    image: "./images/Toby_Littleman.PNG",
     category: "Betting & Chance Games",
   },
   {
@@ -89,7 +89,7 @@ const students = [
   {
     name: "Gianna Cavalari",
     project: "Wild Guess",
-    image: "./images/placeholder.jpg",
+    image: "./images/Gianna_Cavalari.PNG",
     category: "Guessing Games",
   },
   {
@@ -132,7 +132,7 @@ const students = [
   {
     name: "Valeria Sanchez Llanes",
     project: "General Knowledge Quiz",
-    image: "./images/placeholder.jpg",
+    image: "./images/Valeria.PNG",
     category: "Guessing Games",
   },
   {
@@ -201,12 +201,12 @@ const students = [
     image: "./images/Ola_Al_Zreikat.PNG",
     category: "Reaction Time & Clicker Games",
   },
-  // {
-  //   name: "Joao Dias",
-  //   project: "Dot Dash Survival",
-  //   image: "./images/placeholder.jpg",
-  //   category: "Word Games",
-  // },
+  {
+    name: "Joao Dias",
+    project: "Dot Dash Survival",
+    image: "./images/Joao_Dias_2.PNG",
+    category: "Reaction Time & Clicker Games",
+  },
   {
     name: "Corey Furman",
     project: "Energy Savers",
@@ -260,7 +260,7 @@ const students = [
   {
     name: "Matthew Miller",
     project: "Regretevator",
-    image: "./images/placeholder.jpg",
+    image: "./images/Matthew_Miller.PNG",
     category: "Other Games",
   },
   {
@@ -290,7 +290,7 @@ const students = [
   {
     name: "Ritvik Pattela",
     project: "Match the Fruit",
-    image: "./images/Ritvik_Pattela.jpg",
+    image: "./images/Ritvik_Pattela.PNG",
     category: "Other Games",
   },
   {
